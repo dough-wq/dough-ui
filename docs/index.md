@@ -6,7 +6,6 @@ hero:
   text: 一个Vue3组件库
   tagline: 基于Vue3,简洁高效的组件库
   image:
-    
     alt: dough-ui
   actions:
     - theme: brand
