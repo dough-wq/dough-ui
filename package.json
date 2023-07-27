@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "pnpm -C play dev"
+  },
+  "author": "dough-wq",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.64.1",
+    "typescript": "^5.1.6",
+    "vue": "^3.2.36"
+  },
+  "dependencies": {
+    "@dough-ui/components": "workspace:^1.0.0",
+    "@dough-ui/theme-chalk": "workspace:^1.0.0",
+    "@dough-ui/utils": "workspace:^1.0.0"
+  }
+}
