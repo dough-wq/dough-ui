@@ -1,0 +1,138 @@
+@use './mixins/mixins.scss' as *;
+
+@font-face {
+  font-family: 'd-ui-icons'; /* Project id 4185464 */
+  src:
+    url('./fonts/iconfont.woff2') format('woff2'),
+    url('./fonts/iconfont.woff') format('woff'),
+    url('./fonts/iconfont.ttf') format('truetype');
+}
+
+[class^='#{$namespace}-icon'],
+[class*='#{$namespace}-icon'] {
+  font-family: 'd-ui-icons' !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.#{$namespace}-icon-dingwei-01:before {
+  content: '\e610';
+}
+
+.#{$namespace}-icon-shouye-01:before {
+  content: '\e611';
+}
+
+.#{$namespace}-icon-sousuo:before {
+  content: '\e612';
+}
+
+.#{$namespace}-icon-bianji:before {
+  content: '\e613';
+}
+
+.#{$namespace}-icon-shezhi:before {
+  content: '\e614';
+}
+
+.#{$namespace}-icon-a-tupiankuan:before {
+  content: '\e616';
+}
+
+.#{$namespace}-icon-gouwuche:before {
+  content: '\e60b';
+}
+
+.#{$namespace}-icon-dingdan:before {
+  content: '\e60c';
+}
+
+.#{$namespace}-icon-kefu:before {
+  content: '\e60d';
+}
+
+.#{$namespace}-icon-cuohao:before {
+  content: '\e60e';
+}
+
+.#{$namespace}-icon-cuohaoxuanzhong:before {
+  content: '\e60f';
+}
+
+.#{$namespace}-icon-duihao:before {
+  content: '\e615';
+}
+
+.#{$namespace}-icon-shoucangxuanzhong:before {
+  content: '\e617';
+}
+
+.#{$namespace}-icon-duihaoxuanzhong:before {
+  content: '\e618';
+}
+
+.#{$namespace}-icon-rili:before {
+  content: '\e619';
+}
+
+.#{$namespace}-icon-tongzhi:before {
+  content: '\e61a';
+}
+
+.#{$namespace}-icon-kefuxuanzhong:before {
+  content: '\e61b';
+}
+
+.#{$namespace}-icon-shoucang:before {
+  content: '\e61c';
+}
+
+.#{$namespace}-icon-time:before {
+  content: '\e601';
+}
+
+.#{$namespace}-icon-ZoomOut:before {
+  content: '\e602';
+}
+
+.#{$namespace}-icon-ZoomIn:before {
+  content: '\e603';
+}
+
+.#{$namespace}-icon-SwitchButton:before {
+  content: '\e604';
+}
+
+.#{$namespace}-icon-arrow-right:before {
+  content: '\e605';
+}
+
+.#{$namespace}-icon-back:before {
+  content: '\e606';
+}
+
+.#{$namespace}-icon-caret-left:before {
+  content: '\e607';
+}
+
+.#{$namespace}-icon-arrow-left:before {
+  content: '\e608';
+}
+
+.#{$namespace}-icon-caret-right:before {
+  content: '\e609';
+}
+
+.#{$namespace}-icon-right:before {
+  content: '\e60a';
+}
+
+.#{$namespace}-icon-caret-bottom:before {
+  content: '\e61d';
+}
+
+.#{$namespace}-icon-caret-top:before {
+  content: '\e61e';
+}

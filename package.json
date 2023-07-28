@@ -1,0 +1,40 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "pnpm -C play dev",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs",
+    "docs:preview": "vitepress preview docs --port 8080",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "prepare": "husky install"
+  },
+  "author": "dough-wq",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/config-conventional": "^17.6.7",
+    "@typescript-eslint/eslint-plugin": "^6.2.0",
+    "@vue/test-utils": "^2.4.1",
+    "c8": "^8.0.1",
+    "commitlint": "^17.6.7",
+    "eslint": "^8.45.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-vue": "^9.15.1",
+    "happy-dom": "^10.5.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "prettier": "^3.0.0",
+    "sass": "^1.64.1",
+    "typescript": "^5.1.6",
+    "vitepress": "1.0.0-beta.6",
+    "vitest": "^0.33.0",
+    "vue": "^3.2.36"
+  },
+  "dependencies": {
+    "@dough-ui/components": "workspace:^1.0.0",
+    "@dough-ui/theme-chalk": "workspace:^1.0.0",
+    "@dough-ui/utils": "workspace:^1.0.0"
+  }
+}
