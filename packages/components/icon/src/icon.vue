@@ -17,8 +17,8 @@
           return {};
         }
         return {
-          ...(props.size ? { 'font-size': props.size + 'px' } : {}),
-          ...(props.color ? { color: props.color } : {})
+          ...(props.size ? { 'font-size' : props.size +'px' } : {}),
+          ...(props.color ? { 'color': props.color } : {})
         };
       });
 
