@@ -3,35 +3,34 @@
 @use './mixins//mixins.scss' as *;
 @use './mixins//button' as *;
 
-@include b(button){
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: $button-font-weight;
-    line-height: 1;
-    color:$button-font-weight;
-    text-align: center;
-    white-space: nowrap;
-    cursor: pointer;
-    background: $button-default-background-color;
-    border:$border-base;
-    border-color:$button-default-border-color;
-    outline:none;
-    box-sizing: border-box;
-    transition: 0.1s;
+@include b(button) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: $button-font-weight;
+  line-height: 1;
+  color: $button-font-weight;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  background: $button-default-background-color;
+  border: $border-base;
+  border-color: $button-default-border-color;
+  outline: none;
+  box-sizing: border-box;
+  transition: 0.1s;
 
-    & + &{
-        margin-left: 10px;
-    }
-    &:hover,
-    &:focus{
-        color:$color-primary;
-        background-color:$color-primary-light
-    }
-    &:active{
-        color:mix($color-black,$color-primary,$button-active-shade-percent);
-        border-color:mix($color-black,$color-primary,$button-active-shade-percent);
-        outline:none;
-    }
-
+  & + & {
+    margin-left: 10px;
+  }
+  &:hover,
+  &:focus {
+    color: $color-primary;
+    background-color: $color-primary-light;
+  }
+  &:active {
+    color: mix($color-black, $color-primary, $button-active-shade-percent);
+    border-color: mix($color-black, $color-primary, $button-active-shade-percent);
+    outline: none;
+  }
 }

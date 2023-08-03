@@ -9,16 +9,16 @@
   import { iconProps } from './icon';
 
   defineOptions({
-    name:'DIcon'
-  })
-  const props = defineProps(iconProps)
+    name: 'DIcon'
+  });
+  const props = defineProps(iconProps);
 
   const style = computed(() => {
-    const {size,color} = props || {}
-    if(!size && !color) return {}
+    const { size, color } = props || {};
+    if (!size && !color) return {};
     return {
-      ...(size ? {'font-size': size + 'px'} : {}),
-      ...(color ? {color:color} : {})
-    }
-  })
+      ...(size ? { 'font-size': size + 'px' } : {}),
+      ...(color ? { color: color } : {})
+    };
+  });
 </script>
