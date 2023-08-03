@@ -1,2 +1,6 @@
 // 放一些命名规范 BEM规范
-$namespace: 'd';
+$namespace: 'd'; // 空间名称
+$common-separator: "-"; /* 公共的连接符 */
+$element-separator: '__'; // 局部
+$modifier-separator: '--'; // 修饰
+$state-prefix: 'is-'; // 状态

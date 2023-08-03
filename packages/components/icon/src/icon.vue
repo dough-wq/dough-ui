@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts" setup>
-  import { computed, defineComponent } from 'vue';
+  import { computed } from 'vue';
   import { iconProps } from './icon';
 
   defineOptions({
@@ -14,7 +14,7 @@
   const props = defineProps(iconProps)
 
   const style = computed(() => {
-    const {size,color} = props
+    const {size,color} = props || {}
     if(!size && !color) return {}
     return {
       ...(size ? {'font-size': size + 'px'} : {}),
