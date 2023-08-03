@@ -33,4 +33,16 @@
     border-color: mix($color-black, $color-primary, $button-active-shade-percent);
     outline: none;
   }
+
+  /*type*/
+  @include m(primary){
+    @include button-variant(
+        $button-primary-font-color,
+        $button-primary-background-color,
+        $button-primary-border-color
+    );
+  }
+
+
 }
+
