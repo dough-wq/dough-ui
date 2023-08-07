@@ -6,19 +6,15 @@
 @include b(button) {
   display: inline-block;
   line-height: 1;
-  min-height: 40px;
-  min-width: 100px;
   white-space: nowrap;
   cursor: pointer;
   outline: none;
-  padding: 0 15px;
   margin-left: 10px;
   margin-bottom: 10px;
   background: $color-white;
   vertical-align: middle;
   border: 1px solid $color-black;
   color: $color-black;
-  border-radius: 5px;
   &:hover,
   &focus {
     color: $color-primary;
@@ -26,7 +22,14 @@
     opacity: 0.6;
   }
 
-  // 修饰符
+  @include button-size(
+    $button-default-padding-vertical,
+    $button-default-padding-horizontal,
+    $button-default-font-size,
+    $button-default-border-radius
+  );
+
+  // type
   @include m(primary) {
     @include button-variant($color-white, $color-primary, $color-primary);
   }
@@ -41,5 +44,31 @@
   }
   @include m(info) {
     @include button-variant($color-white, $color-info, $color-info);
+  }
+
+  // size
+  @include m(large){
+    @include button-size(
+      $button-large-padding-vertical,
+      $button-large-padding-hoorizontal,
+      $button-large-font-size,
+      $button-large-border-radius
+    )
+  }
+  @include m(default){
+    @include button-size(
+      $button-default-padding-vertical,
+      $button-default-padding-horizontal,
+      $button-default-font-size,
+      $button-default-border-radius
+    )
+  }
+  @include m(small){
+    @include button-size(
+      $button-small-padding-vertical,
+      $button-small-padding-horizontal,
+      $button-small-font-size,
+      $button-small-border-radius
+    )
   }
 }
