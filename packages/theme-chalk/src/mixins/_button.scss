@@ -1,7 +1,6 @@
 @use '../common/var.scss' as *;
 
 @mixin button-plain($color, $background-color, $border-color) {
-
   color: $background-color;
   background-color: mix($color-white, $background-color, 90%);
   border-color: mix($color-white, $border-color, 30%);
