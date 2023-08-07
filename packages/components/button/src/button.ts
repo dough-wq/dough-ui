@@ -1,14 +1,6 @@
 import type { ExtractPropTypes } from 'vue';
 
-export const buttonTypes = [
-  'default',
-  'primary',
-  'success',
-  'danger',
-  'info',
-  'warning',
-  ''
-] as const;
+export const buttonTypes = ['default', 'primary', 'success', 'danger', 'info', 'warning'] as const;
 
 export const buttonSzie = ['', 'default', 'large', 'middle', 'small'] as const;
 
@@ -16,7 +8,7 @@ export const buttonProps = {
   type: {
     type: String,
     value: buttonTypes,
-    default: '',
+    default: 'default',
     validator(value) {
       return (['default', 'primary', 'success', 'info', 'danger', 'warning'] as const).includes(
         value
