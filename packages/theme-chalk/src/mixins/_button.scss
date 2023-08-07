@@ -1,5 +1,43 @@
 @use '../common/var.scss' as *;
 
+@mixin button-plain($color, $background-color, $border-color) {
+
+  color: $background-color;
+  background-color: mix($color-white, $background-color, 90%);
+  border-color: mix($color-white, $border-color, 30%);
+
+  &:hover,
+  &:focus {
+    color: $color;
+    background: $background-color;
+    border-color: $border-color;
+    opacity: 1;
+  }
+
+  &:active {
+    color: $color;
+    background: $background-color;
+    border-color: $border-color;
+    outline: none;
+  }
+
+  &.is-active {
+    color: $color;
+    $background: $background-color;
+    border-color: $border-color;
+  }
+  &.is-disabled {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      color: mix($color-white, $background-color, 90%);
+      background-color: mix($color-white, $background-color, 60%);
+      border-color: mix($color-white, $border-color, 30%);
+    }
+  }
+}
+
 @mixin button-variant($color, $background-color, $border-color) {
   color: $color;
   background-color: $background-color;
@@ -8,20 +46,20 @@
   &:hover,
   &:focus {
     color: $color;
-    background: mix($color-white, $background-color, $button-hover-tint-percent);
+    background-color: mix($color-white, $background-color, $button-hover-tint-percent);
     border-color: mix($color-white, $border-color, $button-hover-tint-percent);
   }
 
   &:active {
     color: $color;
-    background: mix($color-black, $background-color, $button-active-shade-percent);
+    background-color: mix($color-black, $background-color, $button-active-shade-percent);
     border-color: mix($color-black, $border-color, $button-active-shade-percent);
     outline: none;
   }
 
   &.is-active {
     color: $color;
-    $background: mix($color-black, $background-color, $button-active-shade-percent);
+    background-color: mix($color-black, $background-color, $button-active-shade-percent);
     border-color: mix($color-black, $border-color, $button-active-shade-percent);
   }
   &.is-disabled {
@@ -33,6 +71,9 @@
       background-color: mix($background-color, $color-white);
       border-color: mix($border-color, $color-white);
     }
+  }
+  &.is-plain {
+    @include button-plain($color, $background-color, $border-color);
   }
 }
 

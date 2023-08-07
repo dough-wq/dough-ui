@@ -2,7 +2,7 @@ import type { ExtractPropTypes } from 'vue';
 
 export const buttonTypes = ['default', 'primary', 'success', 'danger', 'info', 'warning'] as const;
 
-export const buttonSzie = ['', 'default', 'large', 'middle', 'small'] as const;
+export const buttonSzie = ['large', 'small'] as const;
 
 export const buttonProps = {
   type: {
@@ -20,10 +20,14 @@ export const buttonProps = {
     value: buttonSzie,
     default: '',
     validator(value) {
-      return (['default', 'large', 'medium', 'small'] as const).includes(value);
+      return (['large', 'small'] as const).includes(value);
     }
   },
   disabled: {
+    type: Boolean,
+    default: (): boolean => false
+  },
+  plain: {
     type: Boolean,
     default: (): boolean => false
   }

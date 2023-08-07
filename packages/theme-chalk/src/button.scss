@@ -11,14 +11,15 @@
   outline: none;
   margin-left: 10px;
   margin-bottom: 10px;
-  background: $color-white;
+  background-color: $color-white;
   vertical-align: middle;
-  border: 1px solid $color-black;
-  color: $color-black;
+  border: 1px solid #999;
+  color: #666;
   &:hover,
-  &focus {
+  &:focus {
     color: $color-primary;
     border-color: $color-primary;
+    background-color: $color-primary-light;
     opacity: 0.6;
   }
 
@@ -28,6 +29,17 @@
     $button-default-font-size,
     $button-default-border-radius
   );
+  // 样式覆盖问题：when(plain)这个一定要写在type的前面，写在后面会覆盖type中的button-plain样式
+  // 这里的when(plain)仅仅只为default按钮做的plain样式定义
+  @include when(plain) {
+    &:hover,
+    &:focus {
+      color: $color-primary;
+      border-color: $color-primary;
+      background-color: $color-white;
+      opacity: 1;
+    }
+  }
 
   // type
   @include m(primary) {
@@ -47,28 +59,33 @@
   }
 
   // size
-  @include m(large){
+  @include m(large) {
     @include button-size(
       $button-large-padding-vertical,
       $button-large-padding-hoorizontal,
       $button-large-font-size,
       $button-large-border-radius
-    )
+    );
   }
-  @include m(default){
-    @include button-size(
-      $button-default-padding-vertical,
-      $button-default-padding-horizontal,
-      $button-default-font-size,
-      $button-default-border-radius
-    )
-  }
-  @include m(small){
+
+  @include m(small) {
     @include button-size(
       $button-small-padding-vertical,
       $button-small-padding-horizontal,
       $button-small-font-size,
       $button-small-border-radius
-    )
+    );
   }
+
+  // disabled
+  @include when(disabled) {
+    &,
+    &:hover,
+    &:focus {
+      opacity: 1;
+      cursor: not-allowed;
+    }
+  }
+
+  
 }

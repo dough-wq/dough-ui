@@ -1,6 +1,8 @@
 // 公共的变量
 @use '../mixins/config.scss';
 
+$types: primary, success, warning, danger, error, info;
+
 /* Color
 -------------------------------*/
 
@@ -27,6 +29,7 @@ $color-white: #fff !default;
 $color-black: #000 !default;
 
 $color-primary-light: mix($color-white, $color-primary, 60%) !default;
+$color-primary-light-1: mix($color-white,$color-primary,30%) !default;
 $color-success-light: mix($color-white, $color-success, 60%) !default;
 $color-warning-light: mix($color-white, $color-warning, 60%) !default;
 $color-danger-light: mix($color-white, $color-danger, 60%) !default;
@@ -99,9 +102,9 @@ $button-default-font-color: $color-text-regular !default;
 $button-default-background-color: $color-white !default;
 $button-default-border-color: $border-color-base !default;
 
-$button-disable-font-color: $color-text-placeholder !default;
-$button-disabled-background-color: $color-white !default;
-$button-disabled-border-color: $border-color-lighter !default;
+// $button-disable-font-color: $color-text-placeholder !default;
+// $button-disabled-background-color: $color-white !default;
+// $button-disabled-border-color: $border-color-lighter !default;
 
 $button-primary-border-color: $color-primary !default;
 $button-primary-font-color: $color-white !default;
