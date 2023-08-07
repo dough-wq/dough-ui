@@ -4,25 +4,21 @@
   </i>
 </template>
 
-<script lang="ts">
-  import { computed, defineComponent } from 'vue';
+<script lang="ts" setup>
+  import { computed } from 'vue';
   import { iconProps } from './icon';
 
-  export default defineComponent({
-    name: 'DIcon',
-    props: iconProps,
-    setup(props) {
-      const style = computed(() => {
-        if (!props.size && !props.color) {
-          return {};
-        }
-        return {
-          ...(props.size ? { 'font-size': props.size + 'px' } : {}),
-          ...(props.color ? { color: props.color } : {})
-        };
-      });
+  defineOptions({
+    name: 'DIcon'
+  });
+  const props = defineProps(iconProps);
 
-      return { style };
-    }
+  const style = computed(() => {
+    const { size, color } = props || {};
+    if (!size && !color) return {};
+    return {
+      ...(size ? { 'font-size': size + 'px' } : {}),
+      ...(color ? { color: color } : {})
+    };
   });
 </script>
