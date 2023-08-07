@@ -19,47 +19,27 @@
   border: 1px solid $color-black;
   color: $color-black;
   border-radius: 5px;
-  &:hover,&focus{
-    color:$color-primary;
-    border-color:$color-primary;
+  &:hover,
+  &focus {
+    color: $color-primary;
+    border-color: $color-primary;
     opacity: 0.6;
   }
 
   // 修饰符
   @include m(primary) {
-    @include button-variant(
-      $color-white,
-      $color-primary,
-      $color-primary
-    );
-
+    @include button-variant($color-white, $color-primary, $color-primary);
   }
   @include m(success) {
-    @include button-variant(
-      $color-white,
-      $color-success,
-      $color-success
-    );
+    @include button-variant($color-white, $color-success, $color-success);
   }
-  @include m(warning){
-    @include button-variant(
-      $color-white,
-      $color-warning,
-      $color-warning
-    );
+  @include m(warning) {
+    @include button-variant($color-white, $color-warning, $color-warning);
   }
-  @include m(danger){
-    @include button-variant(
-      $color-white,
-      $color-danger,
-      $color-danger
-    );
+  @include m(danger) {
+    @include button-variant($color-white, $color-danger, $color-danger);
   }
-  @include m(info){
-    @include button-variant(
-      $color-white,
-      $color-info,
-      $color-info
-    );
+  @include m(info) {
+    @include button-variant($color-white, $color-info, $color-info);
   }
 }

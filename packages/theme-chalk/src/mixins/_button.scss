@@ -28,10 +28,10 @@
     &,
     &:hover,
     &:focus,
-    &:active{
-      color:$color-white;
-      background-color:mix($background-color,$color-white);
-      border-color:mix($border-color,$color-white);
+    &:active {
+      color: $color-white;
+      background-color: mix($background-color, $color-white);
+      border-color: mix($border-color, $color-white);
     }
   }
 }

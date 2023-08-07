@@ -14,7 +14,7 @@
   const props = defineProps(buttonProps);
   const classList = computed(() => {
     const { type, size, disabled } = props || {};
-    // console.log(type);    
+    // console.log(type);
     return [
       {
         // 里使用了方括号和反引号，来构造一个字符串模板。
