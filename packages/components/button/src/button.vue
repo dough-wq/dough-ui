@@ -1,18 +1,24 @@
 <template>
-  <button class="d-button" :class="classList" :disabled="disabled" :plain="plain" @click="handleClick">
+  <button
+    class="d-button"
+    :class="classList"
+    :disabled="disabled"
+    :plain="plain"
+    @click="handleClick"
+  >
     <slot></slot>
   </button>
 </template>
 
 <script setup lang="ts">
   import { computed } from 'vue';
-  import { buttonProps ,buttonEmits} from './button';
+  import { buttonProps, buttonEmits } from './button';
 
   defineOptions({
     name: 'DButton'
   });
   const props = defineProps(buttonProps);
-  const emits = defineEmits(buttonEmits)
+  const emits = defineEmits(buttonEmits);
   const classList = computed(() => {
     const { type, size, disabled, plain } = props || {};
     // console.log(type);
@@ -30,7 +36,7 @@
 
   const handleClick = (evt: MouseEvent): void => {
     emits('click', evt);
-  }
+  };
 </script>
 
 <style lang="scss" scoped></style>
