@@ -31,4 +31,5 @@
   <d-button type="info" plain>plain</d-button>
   <d-button type="danger" plain disabled>plain</d-button>
   <d-button type="info" plain disabled>plain</d-button>
+  <d-button @click="() => console.log('hello')">click</d-button>
 </template>
